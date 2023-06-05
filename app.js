@@ -22,15 +22,6 @@ app.use("/api", indexRoutes);
 const authRoutes = require("./routes/auth.routes");
 app.use("/auth", authRoutes);
 
-const transpRoutes = require("./routes/transp.routes");
-app.use("/transportist", transpRoutes);
-
-const shipmentRoutes = require("./routes/shipment.routes");
-app.use("/api/shipment", shipmentRoutes)
-
-const profileRoutes = require("./routes/profile.routes");
-app.use("/profile", profileRoutes)
-
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
 
